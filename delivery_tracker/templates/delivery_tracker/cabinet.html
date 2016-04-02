@@ -1,0 +1,76 @@
+{% extends 'delivery_tracker/base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+    <div class="container">
+        <div class="row top-offset-20">
+            <div class="col-md-offset-8 col-md-3">
+                <b>Welcome{% if user.first_name %}, {{ user.first_name }}{% endif %}!</b>
+            </div>
+            <div class="col-md-1">
+                <b><a href="{% url 'logout' %}">Logout</a></b>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8 top-offset-20">
+                <div class="header_stripe">
+                    <a href="{% url 'cabinet' %}"><span class="glyphicon glyphicon-heart" aria-hidden="true"></span> Main</a>
+                </div>
+                <div class="row top-offset-20">
+                    <div class="col-md-3 col-sm-3 link_hover_disabled">
+                        <a href="{% url 'cabinet' %}"><div class="cabinet_page_header"><img src="{% static 'img/order.png' %}" alt="Orders and bills" class="left_img"/><b>Orders and bills</b></div></a>
+                        <a href="{% url 'cabinet' %}"><div class="cabinet_page_button_lime"><b>+ Create new <br>order<br></b></div></a>
+                        <a href="{% url 'cabinet' %}"><div class="cabinet_page_button_gray"><b>My orders</b></div></a>
+                        <a href="{% url 'cabinet' %}"><div class="cabinet_page_button_gray"><b>My bills for paying</b></div></a>
+                    </div>
+                    <div class="col-md-3 col-sm-3 link_hover_disabled">
+                        <a href="{% url 'cabinet' %}"><div class="cabinet_page_header"><img src="{% static 'img/box.png' %}" alt="Goods and parcels" class="left_img"/><b>Goods and parcels</b></div></a>
+                        <a href="{% url 'cabinet' %}"><div class="cabinet_page_button_lime"><b>+ Incoming parcel registration</b></div></a>
+                        <a href="{% url 'cabinet' %}"><div class="cabinet_page_button_lime"><b>+ Create outgoing parcel</b></div></a>
+                        <a href="{% url 'cabinet' %}"><div class="cabinet_page_button_gray"><b>My parcels (shipping, storing)</b></div></a>
+                        <a href="{% url 'cabinet' %}"><div class="cabinet_page_button_gray"><b>My virtual address</b></div></a>
+                    </div>
+                    <div class="col-md-3 col-sm-3 link_hover_disabled">
+                        <a href="{% url 'cabinet' %}"><div class="cabinet_page_header"><img src="{% static 'img/message.png' %}" alt="Messages and help" class="left_img"/><b>Messages and help</b></div></a>
+                        <a href="{% url 'cabinet' %}"><div class="cabinet_page_button_lime"><b>+ Create a new request</b></div></a>
+                        <a href="{% url 'cabinet' %}"><div class="cabinet_page_button_gray"><b>My appeals</b></div></a>
+                        <a href="{% url 'cabinet' %}"><div class="cabinet_page_button_gray"><b>Frequently asked questions</b></div></a>
+                        <a href="{% url 'cabinet' %}"><div class="cabinet_page_button_gray"><b>Prices and calculator</b></div></a>
+                        <a href="{% url 'cabinet' %}"><div class="cabinet_page_button_gray"><b>User agreement</b></div></a>
+                    </div>
+                    <div class="col-md-3 col-sm-3 link_hover_disabled">
+                        <a href="{% url 'cabinet_personal_data' %}"><div class="cabinet_page_header"><img src="{% static 'img/person.png' %}" alt="Personal Data" class="left_img"/><b>Personal Data</b></div></a>
+                        <a href="{% url 'cabinet' %}"><div class="cabinet_page_button_lime"><b>+ My bonuses</b></div></a>
+                        <a href="{% url 'cabinet' %}"><div class="cabinet_page_button_gray"><b>Preferences</b></div></a>
+                        <a href="{% url 'cabinet' %}"><div class="cabinet_page_button_gray"><b>Addresses</b></div></a>
+                        <a href="{% url 'cabinet' %}"><div class="cabinet_page_button_gray"><b>Account verification</b></div></a>
+                        <a href="{% url 'cabinet' %}"><div class="cabinet_page_button_gray"><b>Social networks</b></div></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-offset-1 col-md-3 top-offset-20">
+                <div class="row header_stripe">
+                    <div class="col-sm-8">Not yet payed bills</div><div class="col-sm-4 header_stripe_money">0 (0 euro)</div>
+                </div>
+                <div class="row header_stripe">
+                    <div class="col-sm-8">Parcels stored</div><div class="col-sm-4 header_stripe_money">0 (0 euro)</div>
+                </div>
+                <div class="row header_stripe">
+                    <div class="col-sm-8">Ready for shipping</div><div class="col-sm-4 header_stripe_money">0 (0 euro)</div>
+                </div>
+                <div class="row header_stripe">
+                    <div class="col-sm-8">Shipping</div><div class="col-sm-4 header_stripe_money">0 (0 euro)</div>
+                </div>
+
+                <div class="row news_header_stripe">
+                    News
+                </div>
+                <ul>
+                    <li>I've heard them calling in the distance So I packed my things and run</li>
+                    <li>Far away from other trouble I had caused with my two hands</li>
+                    <li>Hold your horses now (and sleep until the sun goes down) through the worlds we ran (deep into the mountain sound)</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+{% endblock %}

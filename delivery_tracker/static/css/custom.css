@@ -1,0 +1,102 @@
+.top-offset-20 {
+    margin-top: 20px;
+}
+
+.left_img {
+    float: left;
+}
+
+.header_stripe {
+    margin-bottom: 10px;
+    background: #A0A09F;
+    height: 50px;
+    line-height: 50px;
+    white-space: nowrap;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    padding-left: 10px;
+}
+
+.header_stripe_money {
+    color: yellow;
+    text-align: right;
+}
+
+.news_header_stripe {
+    margin-top: 50px;
+    background: #A0A09F;
+    height: 50px;
+    line-height: 50px;
+    white-space: nowrap;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    padding-left: 10px;
+    text-align: center;
+}
+
+.cabinet_page_header {
+    text-align: center;
+    margin-top: 5px;
+    height: 50px;
+}
+
+.header_stripe a {
+    text-decoration: none;
+    color: white;
+}
+.header_stripe a:visited {
+    text-decoration: none;
+    color: white;
+}
+.header_stripe a:hover {
+    color: white;
+}
+.header_stripe a:active {
+    text-decoration: none;
+    color: white;
+}
+
+.link_hover_disabled a:hover {
+    text-decoration: none;
+}
+
+.cabinet_page_button_lime {
+    background: #BADA55;
+    color: white;
+    text-align: center;
+    margin-top: 10px;
+    padding: 5px;
+    height: 50px;
+}
+.cabinet_page_button_gray {
+    background: #A0A09F;
+    color: white;
+    text-align: center;
+    margin-top: 10px;
+    padding: 5px;
+    height: 50px;
+}
+
+.ui-dialog {
+    z-index: 1001 !important;
+    padding: 0.3em;
+}
+#dialog_form {
+    padding: 15px;
+    background: #BADA55;
+    display: none;
+}
+.validate_tips {
+    border: 1px solid transparent;
+    padding: 0.3em;
+}
+.shadow_all {
+    position: absolute;
+    height: 5000px;
+    width: 5000px;
+    background: rgba(0,0,0,0.5);
+    z-index: 1000;
+    display: none;
+}
